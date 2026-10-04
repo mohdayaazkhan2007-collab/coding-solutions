@@ -52,7 +52,7 @@ Print the appropriate English representation,`even`, or `odd`, based on the cond
 **Language:** C  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T12:29:18.828Z  
+**Submitted:** 2026-10-04T17:46:47.938Z  
 
 ```c
 #include <stdio.h>
@@ -60,30 +60,34 @@ Print the appropriate English representation,`even`, or `odd`, based on the cond
 #include <math.h>
 #include <stdlib.h>
 
-
-
-int main() 
-{
+int main() {
     int a, b;
     scanf("%d\n%d", &a, &b);
-  	// Complete the code.
+    
     // Array of words from 1 to 9
-char* words[] = {" one", "two", "three", "four", "five", "six", "seven",  "eight", "nine"};
-// Loop through the range [a, b] inclusive
-for (int n = a ; n <= b; n++) {
-    if (n >= 1 && n <=9){
-        printf("%s\n", words[n - 1]);
-}
-else if (n > 9){
-    if (n % 2 == 0){
-        printf("even\n");
-            }   else {
-               printf("odd\n");
+    char* words[] = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+
+    // Loop through the range [a, b] inclusive
+    for (int n = a; n <= b; n++) {
+        if (n >= 1 && n <= 9) {
+            printf("%s\n", words[n - 1]);
+        } 
+        else if (n > 9) {
+            if (n % 2 == 0) {
+                printf("even\n");
+            } else {
+                printf("odd\n");
             }
         }
- } // closes the for loop
- return 0;
+    }
+    
+    return 0;
 }
+
+
+
+ 
+
 
 
 ```
